@@ -1,0 +1,71 @@
+@use 'variables' as v;
+
+.search_section {
+    text-align: -webkit-right;
+    margin-right: 1px;
+
+    .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
+        border-top-right-radius: 1px!important;
+        border-bottom-right-radius: 0;
+    }
+
+    .input-group-text-basic{
+        border-top-right-radius: unset!important;
+        border: unset!important;
+        // border-left: 1px solid #ced4da !important;
+        // border-top: 1px solid #ced4da !important;
+        // border-bottom: 1px solid #ced4da !important;
+        border-right: unset!important;
+        background-color: white!important;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        .b-icon.bi{
+            color: black;
+        }
+    }
+
+    .input-group-text{
+        border-top-right-radius: unset!important;
+        border: unset!important;
+        border-left: 1px solid #ced4da !important;
+        border-top: 1px solid #ced4da !important;
+        border-bottom: 1px solid #ced4da !important;
+        border-right: unset!important;
+        background-color: white!important;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        .b-icon.bi{
+            color: black;
+        }
+    }
+
+    .search_textbox_basic{
+        // border-left: unset;
+        // border-top: 1px solid #ced4da;
+        // border-bottom: 1px solid #ced4da;
+        // background-color: rgb(243 243 242 / 10%);
+        // border-top-right-radius: 5px;
+        // border-bottom-right-radius: 5px;
+
+        &::placeholder{
+            color: v.$sia-deep-blue;
+            opacity: 0.8; /* Firefox */
+            font-style: italic;
+        }
+    }
+
+    .search_textbox{
+        border-left: unset;
+        border-top: 1px solid #ced4da;
+        border-bottom: 1px solid #ced4da;
+        background-color: rgb(243 243 242 / 10%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        &::placeholder{
+            color: v.$sia-deep-blue;
+            opacity: 0.8; /* Firefox */
+            font-style: italic;
+        }
+    }
+}

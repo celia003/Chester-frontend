@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+#overlay {
+    background: v.$sia-grey-80;
+    color: v.$sia-grey-80;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 25%;
+    opacity: .80;
+  }
+  .spinner {
+    margin: 0 auto;
+    height: 64px;
+    width: 64px;
+    animation: rotate 0.8s infinite linear;
+    border: 5px solid v.$sia-deep-blue-opacity-80;
+    border-right-color: transparent;
+    border-radius: 50%;
+  }
+  @keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+.loading_class{
+  opacity: 0.2;
+}

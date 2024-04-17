@@ -1,0 +1,194 @@
+@use 'variables' as v;
+
+.select-pointer{
+    cursor: pointer;
+}
+
+.btn {
+    padding: 0px 10px !important;
+    display: inline-block;
+    font-size: unset !important;
+    font-size: 0.9rem!important;
+
+    &.btn-title {
+        background-color: white !important;
+        color: v.$sia-deep-blue !important;
+        border-style: solid;
+        border-width: 1px;
+        border-color: v.$sia-deep-blue !important;
+    }
+
+    &.btn-action {
+        color: white !important;
+        border-style: solid;
+        border-width: 1px;
+        // padding: 3px 10px;4
+        border-radius: 0.25rem;
+
+        // height: calc(1.2em + 0.75rem + 2px) !important;
+
+        background-color: v.$sia-deep-blue !important;
+        border-color: v.$sia-deep-blue !important;
+
+        &.empty{
+            background-color: white !important;
+            color: v.$sia-deep-blue!important;
+            border-color: v.$sia-deep-blue !important;
+        }
+        &.blue{
+            background-color: v.$sia-deep-blue !important;
+            border-color: v.$sia-deep-blue !important;
+        }
+        &.light-blue{
+            background-color: v.$sia-blue !important;
+            border-color: v.$sia-blue !important;
+        }
+        &.red{
+            // color: v.$red-text !important;
+            background-color: v.$red-background !important;
+            border-color: v.$red-background !important;
+        }
+
+    }
+
+    &.btn-send {
+        // background-color: v.$sia-purple;
+        background-color: v.$sia-deep-blue !important;
+        color: v.$text-white !important;
+    }
+
+    &.btn-cancel {
+        // background-color: v.$sia-grey;
+        background-color: #d8d8d8;
+        color: v.$sia-deep-blue;
+    }
+    
+    &.btn-red {
+        background-color: v.$red-background;
+        color: v.$red-text;
+    }
+    
+    &.btn-blue {
+        background-color: #3c8dbc50;
+        color: #3c8dbc;
+    }
+
+    &.btn-secondary {
+        background-color: unset !important;
+        border-color: v.$sia-deep-blue !important;
+    }
+
+    &.chat-icon:focus, &.chat-icon:active, &.chat-icon:hover{
+        outline: none;
+    }
+
+    :active, :focus, :hover{
+        outline: none; border-style: none;
+    }
+}
+
+
+@mixin inprogress-text{
+    color: v.$sia-blue !important;
+    border-radius: 5px !important;
+    @media screen and (min-width: 1262px) and (max-width: 1919px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1920px) and (max-width: 3000px) {
+        padding: 0px 5px;
+    }
+}
+
+
+@mixin low-text{
+    color: v.$sia-green;
+    border-radius: 5px;
+
+    @media screen and (min-width: 1262px) and (max-width: 1919px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1920px) and (max-width: 3000px) {
+        padding: 0px 5px;
+    }
+}
+
+@mixin medium-text{
+    color: v.$sia-orange;
+    border-radius: 5px;
+    @media screen and (min-width: 1262px) and (max-width: 1919px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1920px) and (max-width: 3000px) {
+        padding: 0px 5px;
+    }
+}
+
+@mixin high-text{
+    // background-color: #db685a;
+    color: #db685a;
+    border-radius: 5px;
+    @media screen and (min-width: 1262px) and (max-width: 1919px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1920px) and (max-width: 3000px) {
+        padding: 0px 5px;
+    }
+}
+
+@mixin critical-text{
+    color: #9e1313;
+    border-radius: 5px;
+    @media screen and (min-width: 1262px) and (max-width: 1919px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1920px) and (max-width: 3000px) {
+        padding: 0px 5px;
+    }
+}
+
+.label-text {
+    &.inprogress, &.new, &.info{
+        @include inprogress-text;
+    }
+    
+    &.low{
+        @include low-text
+    }
+    // &.tbd, &.notperformed{
+    //     @include tbd-text
+    // }
+
+    // &.completed, &.detected, &.certificated, &.resolved, &.low{
+    //     @include completed-text
+    // }
+
+    // &.abandon, &.reported, &.waiting{
+    //     @include abandon-text
+    // }
+
+    &.medium{
+        @include medium-text
+    }
+
+    &.high{
+        @include high-text
+    }
+
+    &.critical{
+        @include high-text
+    }
+
+    // &.notdetected, &.high, &.stopped, &.tocheck{
+    //     @include notcompleted-text
+    // }
+
+    // &.critical{
+    //     @include critical-text
+    // }
+
+    // &.finished{
+    //     @include completed;
+    //     background-color: #47d7d4 !important;
+    // }
+    // padding: unset !important;
+}

@@ -1,0 +1,53 @@
+@use 'variables' as v;
+
+.pagination{
+
+  .pagination-container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px 0px;
+  }
+
+  .paginate-buttons {
+    width: 30px;
+    height: 30px;
+    margin-inline: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-radius: 2px;
+  }
+
+  .back-button {
+    // width: 70px;
+    width: auto;
+  }
+
+  .next-button {
+    // width: 70px;
+    width: auto;
+  }
+
+  .back-button svg {
+    transform: rotate(180deg);
+  }
+
+  .active-page {
+    background-color: v.$sia-blue;
+    color: #fff;
+  }
+  
+  .paginate-buttons:hover {
+    background-color: #e5e5e5;
+  }
+
+  .active-page:hover {
+    background-color: #3b8cc3;
+    color: #fff;
+  }
+
+  .back-button:active, .next-button:active {
+    background-color: #dedede;
+  }
+
+}

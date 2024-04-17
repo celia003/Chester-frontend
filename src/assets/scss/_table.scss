@@ -1,0 +1,57 @@
+@use 'variables' as v;
+
+.table{
+    text-align: left;
+
+    th {
+        padding: 10px 10px 0px 10px;
+        color: v.$sia-deep-blue;
+        background-color: white !important;
+        border: unset;
+        vertical-align: unset !important;
+        border-bottom: 2px solid v.$sia-deep-blue-opacity!important;
+        font-weight: bold;
+    }
+
+    thead{
+        tr{
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+        }
+    }
+
+    td{
+        @media screen and (max-width: 1319px) {
+            padding:0.35rem;
+        }
+        @media screen and (min-width: 1320px) and (max-width: 2000px) {
+            padding:0.45rem;
+        }
+        @media screen and (min-width: 2000px) and (max-width: 3000px) {
+            padding:0.65rem;
+        }
+    }
+
+    .table-row{
+        a{
+            color:unset!important;
+        }
+        &:hover{
+            text-decoration:none;
+            background-color: v.$item_hover;
+            cursor: pointer;
+
+            .icon-action{
+                display: block;
+            }
+        }
+    }
+}
+
+.row_disabled{
+    background-color: #f4f4f463;
+}
+
+.row_disabled>td:not([class="action"]){
+    opacity: 0.5;
+}

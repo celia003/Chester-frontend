@@ -1,0 +1,23 @@
+@use 'variables' as v;
+
+.section_tooltip .section_tooltiptext {
+  display: none;
+  width: 500px;
+  background-color: white;
+  color: rgb(32, 42, 68);
+  text-align: left;
+  border-radius: 6px;
+  border-style: solid;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  border-width: 1px;
+}
+
+.section_tooltip:hover .section_tooltiptext {
+  position: absolute;
+  display: inline-block;
+  left: 25px;
+  font-size: 11px;
+  width: auto;
+}

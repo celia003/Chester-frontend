@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+.icon-rounded{
+    border-radius: 50%;
+    background-color: v.$sia-blue;
+    color: white;
+    margin-right: 10px;
+    vertical-align: -0.2em;
+}
+
+.icon_active{
+    opacity: 1;
+    color: v.$sia-blue;
+    text-decoration: unset;
+}

@@ -1,0 +1,35 @@
+@use '../variables' as v;
+
+.grid-container-header-action-buttons{
+    text-align: left;
+    display: grid; 
+    grid-gap: 10px; 
+    grid-template-columns: auto auto auto; 
+    margin-left: 10px!important;
+}
+
+.grid-container-buttons, .grid-container-action-buttons{
+    display: grid;
+}
+
+.grid-container-buttons{
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    .grid-container-action-buttons{
+        margin: 5px 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+}
+
+.form-control {
+    background-color: unset!important;
+}
+
+.multiselect-blue {
+    --ms-tag-bg: red!important;
+    --ms-tag-color: #2563EB!important;
+    --ms-option-bg-selected-pointed: #2563EB!important;
+    --ms-option-bg-selected: orange!important;
+    --ms-option-color-selected: yellow!important;
+}

@@ -1,0 +1,173 @@
+@use 'variables' as v;
+@use "sass:math";
+
+@mixin title_style{
+    .title {
+        position: relative;
+        font-size: v.$title_section !important;
+    }
+}
+
+@mixin title_style_mini{
+    .title {
+        position: relative;
+        font-size: inherit!important;
+    }
+}
+
+@mixin action_header{
+    .action_header{
+        position: relative;
+        // top: 5px;
+    }
+}
+
+@mixin title_header{
+    .title_header {
+        text-align: left;
+        // font-weight: bold;
+        // font-size: 1.5em !important;
+        display: grid; 
+        grid-gap: 10px; 
+        grid-template-columns: auto 1fr;
+    }
+}
+
+@mixin mixin-header{
+    display: grid;
+    grid-gap: 20px;
+    padding: v.$base-padding;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+
+    // border: 1px solid v.$sia-grey-50;
+
+    // box-shadow: v.$sia-grey-20 2px 3px 4px 0px !important;
+
+    .search_field{
+        width: 350px;
+        // top: 5px
+    }
+
+    .search_field_extended{
+        @media screen and (max-width: 1319px) {
+            width: 300;
+        }
+        @media screen and (min-width: 1320px) and (max-width: 1920px) {
+            width: 350px;
+        }
+        @media screen and (min-width:1921px) and (max-width: 3000px) {
+            width: 600px;
+        }
+        // top: 5px
+    }
+
+    @include title_style;
+    @include action_header;
+
+    @media screen and (max-width: 1319px) {
+        @include title_header;
+        // @include custom_breadcrumb;
+        // margin-left: v.$sidebar-width + (v.$base-padding/3) !important;
+    }
+    @media screen and (min-width: 1320px) and (max-width: 1920px) {
+        @include title_header;
+        // @include custom_breadcrumb;
+        // margin-left: v.$sidebar-width + (v.$base-padding/3) !important;
+    }
+    @media screen and (min-width:1921px) and (max-width: 3000px) {
+        @include title_header;
+        // @include custom_breadcrumb;
+        // margin-left: v.$sidebar-width + (v.$base-padding/3) !important;
+    }
+}
+
+@mixin mixin-header-mini{
+    display: grid;
+    grid-gap: 20px;
+    padding: math.div(v.$base-padding,3);
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+
+    // border: 1px solid v.$sia-grey-50;
+
+    // box-shadow: v.$sia-grey-20 2px 3px 4px 0px !important;
+
+    .search_field{
+        width: 350px;
+        // top: 5px
+    }
+
+    .search_field_extended{
+        @media screen and (max-width: 1319px) {
+            width: 300;
+        }
+        @media screen and (min-width: 1320px) and (max-width: 1920px) {
+            width: 350px;
+        }
+        @media screen and (min-width:1921px) and (max-width: 3000px) {
+            width: 600px;
+        }
+        // top: 5px
+    }
+
+    @include title_style_mini;
+    @include action_header;
+
+    @media screen and (max-width: 1319px) {
+        @include title_header;
+        // @include custom_breadcrumb;
+        // margin-left: v.$sidebar-width + (v.$base-padding/3) !important;
+    }
+    @media screen and (min-width: 1320px) and (max-width: 1920px) {
+        @include title_header;
+        // @include custom_breadcrumb;
+        // margin-left: v.$sidebar-width + (v.$base-padding/3) !important;
+    }
+    @media screen and (min-width:1921px) and (max-width: 3000px) {
+        @include title_header;
+        // @include custom_breadcrumb;
+        // margin-left: v.$sidebar-width + (v.$base-padding/3) !important;
+    }
+}
+
+@mixin search_section{
+    .search_section {
+        // margin-top: 10px; 
+        text-align: -webkit-right; 
+        text-align: -moz-right;
+        // margin-right: 20px;
+    }
+}
+
+.header_content{
+    @include mixin-header;
+    // @include search_section;
+}
+
+.header_content_mini{
+    @include mixin-header-mini;
+    @include search_section;
+}
+
+.modal-body{
+    .modal-search-section{
+        .search_section{
+            width: 50%;
+            padding-bottom: v.$base-padding;
+            margin-left: v.$base-padding;;
+        }
+    }
+}
+
+.search_textbox{
+    font-size: unset;
+}
+
+.grid-container-header-action-buttons{
+    text-align: left;
+    display: grid; 
+    grid-gap: v.$base-padding; 
+    grid-template-columns: auto 1fr; 
+    margin-left: v.$base-padding!important;
+}

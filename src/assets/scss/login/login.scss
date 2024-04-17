@@ -1,0 +1,167 @@
+@use '../variables' as v;
+
+form{
+	display:flex;
+	flex-direction:column;
+}
+
+.info{
+	width:100%;
+	text-align:center;
+	min-height:45px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.info p{
+	margin:auto;
+	padding:5px;
+}
+
+.info_version{
+	position: absolute; 
+	bottom: 40px; 
+	right: 55px;
+}
+
+
+
+button{
+	height:40px;
+	padding: 5px 5px;
+	margin: 10px 0px;
+	font-weight:bold;
+	background-color: v.$sia-blue;
+	// border:none;
+	color:white;
+	cursor:pointer;
+	
+
+	&.auth{
+		border: unset!important;
+		color: #202a44 !important;
+		border: unset!important;
+		border-color: unset!important;
+	
+		border-style: solid!important;
+		border-width: 1px!important;
+		border-radius: 0.25rem!important;
+		
+		&-selected{
+			margin-bottom: 0px; 
+			border-color: v.$sia-blue !important; 
+			font-weight: normal;
+			background-color: v.$sia-deep-blue-opacity-login!important;
+			color: v.$sia-deep-blue !important;
+		}
+		&-unselected{
+			margin-bottom: 0px; 
+			border-color: v.$sia-deep-blue-opacity !important;
+			background-color: white!important;
+			font-weight: normal;
+			color: v.$sia-deep-blue !important;
+		}
+	}
+
+	&:focus-visible{
+		color: white!important;
+		background-color: v.$sia-blue!important;
+	}
+	&:hover{
+		color: white!important;
+		background-color: v.$sia-blue!important;
+	}
+}
+
+.login{
+	font-size:16px!important;
+}
+
+input {
+  height: 40px;
+  padding: 10px 15px;
+  margin: 12px 0px;
+//   background-color: #e0dada;
+  background-color: v.$sia-grey-20;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  &:focus-visible{
+	outline: 1px solid v.$sia-blue;
+  }
+  &::placeholder {
+	font-weight: bold;
+	font-size: 1.00rem;
+	font-style: italic;
+  }
+}
+
+.login-white-square {
+	width: 500px;
+	background-color: #fff;
+	border-radius: 3px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 0px 50px;
+
+	&.small_square {
+		height: 450px;
+	}
+
+	&.medium_square {
+		height: 515px;
+		// height: 540px;
+	}
+
+	&.large_square {
+		height: 585px;
+	}
+}
+
+.info{
+	&-error{
+		color: v.$red-text;
+	}
+	&-section{
+		background-color: v.$grey-info-color;
+		padding: 10px;
+		font-weight: bold;
+	}
+}
+
+
+@-webkit-keyframes shake{
+	from, to{
+		-webkit-transform: translate3d(0, 0, 0);
+		transform:translate3d(0,0,0);
+	}
+	10%,30%,50%,70%,90%{
+		-webkit-transform: translate3d(-10px, 0, 0);
+		transform:translate3d(-10px,0,0);
+	}
+	20%,40%,60%,80%{
+		-webkit-transform: translate3d(10px, 0, 0);
+		transform:translate3d(10px,0,0);
+	}
+}
+
+.shake{
+	animation-name: shake;
+	animation-duration:1s;
+	/*animation-fill-mode: both;*/
+}
+
+@media screen and (max-width: 780px) {
+	section{
+		width:90%;
+	}
+}
+
+
+/*****************/

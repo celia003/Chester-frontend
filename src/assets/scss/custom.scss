@@ -1,0 +1,106 @@
+@use 'variables' as v;
+@use 'fonts';
+@use 'filter';
+@use 'box';
+@use 'table';
+@use 'header_content';
+@use 'navbar';
+@use 'buttons';
+@use 'sidebar';
+@use 'breadcrumb';
+@use 'search';
+@use 'pagination';
+@use 'swal';
+@use 'datepicker';
+@use 'overlay';
+@use 'scrollbar';
+@use 'tooltip';
+@use 'icons';
+@use "sass:math";
+
+@mixin mixin-body{
+    font-family: v.$font-family-base;
+    background-color: v.$sia-grey-70;
+    color: v.$sia-deep-blue;
+}
+
+body{
+    @include mixin-body()
+}
+
+$grid-columns: 16 !default;
+
+$body-bg: v.$sia-grey-70;
+$body-color: v.$sia-deep-blue;
+
+$table-bg: transparent;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+.multiselect-sia {
+    --ms-tag-bg: #D9D9D6 !important;
+    // --ms-tag-color: rgb(32,42,68,.8)!important;
+    --ms-tag-color: v.$sia-blue!important;
+    // --ms-option-bg-selected-pointed: #2563EB!important;
+    --ms-option-bg-selected-pointed: v.$sia-blue!important;
+    --ms-option-bg-selected: v.$sia-deep-blue!important;
+    --ms-option-color-selected: v.$sia-deep-blue!important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.module-main-indicator {
+    font-size: 2.0rem;
+    text-align: left;
+}
+
+a{
+    &:hover{
+        text-decoration:none !important;
+    }
+}
+
+.grid-container-auto{
+    display: grid;
+    margin-top: v.$base-padding;
+    grid-gap: v.$base-padding;
+}
+
+.dropdown-header {
+    font-size: 1rem;
+}
+
+.login-style {
+    font-family: v.$font-family-base;
+    background-image: url('../../assets/login-background.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.form-control:focus {
+    color: #202a44;
+    background-color: white;
+    border-color: #ced4da;
+    outline: 0;
+    box-shadow: 0 0 0 0 v.$sia-deep-blue!important;
+}
+
+input{
+    &::placeholder{
+        color: v.$sia-deep-blue;
+        opacity: 0.4!important; /* Firefox */
+        font-style: italic;
+    }
+}

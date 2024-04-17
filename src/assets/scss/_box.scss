@@ -1,0 +1,61 @@
+@use 'variables' as v;
+@use "sass:math";
+
+.box{
+    // margin: 0px 0px 0px 0px;
+    border-radius: 10px!important;
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    // box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    box-shadow: v.$sia-grey-20 2px 3px 4px 0px !important;
+    &.wos{//without shadows
+        box-shadow: unset !important;
+
+        // .box-body{
+        //     padding: unset!important;
+        // }
+    }
+    &.wsb{
+        border-style: solid; 
+        border-width: 1px; 
+        border-color: v.$sia-grey-20; 
+        padding: 0px 10px;
+    }
+    &.box-content{
+        margin-top: math.div(v.$base-padding,2) !important;
+
+        // @include responsive-align-left();
+
+        .box-body{
+            padding: 0px v.$base-padding;
+            &.form{
+                padding-right: 20px; 
+                padding-left: 20px; 
+                padding-bottom: 20px; 
+                padding-top: 20px; 
+            }
+        }
+    }
+
+    .box-header{
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgb(32 42 68 / 10%);
+        .header_content{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        &.wob{
+            border:unset!important
+        }
+    }
+
+    .box-footer {
+        // padding-right: 5vw;
+        // padding-left: 20px;
+        // padding-bottom: 2vw;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+}

@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+.grid-container-filter{
+    padding: 15px !important;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: #ccc 0px 1px 4px 1px !important;
+    margin-right: 15px;
+    &-extended{
+        width: 350px;
+    }
+}

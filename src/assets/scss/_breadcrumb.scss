@@ -1,0 +1,48 @@
+@use 'variables' as v;
+@use "sass:math";
+
+.custom_breadcrumb{
+  // margin-left: v.$sidebar-width + math.div(v.$base-padding, 3) !important;
+  font-size: 0.86rem;
+  font-weight: unset !important;
+  // font-style: italic;
+  color: v.$sia-deep-blue;
+  text-align: left;
+  font-weight: bold;
+  margin: 3px 0px;
+
+  .title_section_page{
+      font-size: v.$title_general;
+      font-style: normal;
+      line-height: 1.1;
+  }
+
+  ol{
+    margin-bottom: unset !important;
+    padding-left:0; 
+    list-style-position:inside; 
+    font-weight: 300!important;
+    li{
+        display: inline-block;
+
+        .padding-subsection-breadcrumb{
+            padding-left: math.div(v.$base-padding,3)!important;
+        }
+    }
+    //   margin-bottom: unset !important;
+    //   li{
+    //       display: inline-block;
+    //   }
+  }
+  li+li:before{
+      padding: 0 5px;
+      color: v.$sia-deep-blue;
+      content: "/\00a0";
+  }
+}
+
+.module-active{
+  color: v.$sia-blue !important; 
+  text-decoration: underline;
+  cursor: pointer;
+}
